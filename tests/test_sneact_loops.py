@@ -5,7 +5,7 @@ from sneact.html import div, p, img
 
 # fmt: off
 
-def test_conditions():
+def test_conditions(loops_expected_results):
     scope = dict(
         images=["cat.png", "dog.png", "frog.png"]
     )
@@ -17,4 +17,4 @@ def test_conditions():
         <<-div>>_
     )
     result = page.compile().as_html()
-    assert result == ""
+    assert result == loops_expected_results

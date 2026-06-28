@@ -84,3 +84,19 @@ def not_conditions_expected_results():
         )
         + "\n"
     )
+
+
+@fixture
+def loops_expected_results():
+    return (
+        "\n".join(
+            (
+                "<div>",
+                "<img src=cat.png>",
+                "<img src=dog.png>",
+                "<img src=frog.png>",
+                "</div>",
+            )
+        )
+        + "\n"
+    )
